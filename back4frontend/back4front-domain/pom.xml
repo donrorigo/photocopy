@@ -5,15 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.photocopy.io</groupId>
-    <artifactId>photocopy</artifactId>
+    <artifactId>back4frontend</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <packaging>pom</packaging>
-  <modules>
-    <module>back4front-domain</module>
-  </modules>
-  <artifactId>back4frontend</artifactId>
+  <artifactId>back4front-domain</artifactId>
 
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
