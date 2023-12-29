@@ -11,6 +11,7 @@ public class Order {
   private final UUID id;
   private final UUID userId;
   private final BigDecimal pricing;
-  private final Boolean isAlreadyPaid;
+  private final Boolean isBlackAndWhite;
+  private Boolean isAlreadyPaid;
   private final String pdfReference;
 }

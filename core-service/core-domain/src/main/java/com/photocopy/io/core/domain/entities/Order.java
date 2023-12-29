@@ -16,6 +16,7 @@ public class Order implements Comparable<Order> {
   private String qrReference;
   private String pdfReference;
   private Instant printedAt;
+  private Boolean isAlreadyPaid;
   private final Instant createdAt;
   private Instant updatedAt;
 
