@@ -13,7 +13,7 @@ public interface UpdateOrderUseCase extends UseCase<InputValues, Order> {
   @Data
   @Builder
   class InputValues {
-    private final UUID userId;
+    private final UUID orderId;
     private final UUID printerId;
     private final Instant printedAt;
   }

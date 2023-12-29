@@ -12,7 +12,7 @@ import lombok.EqualsAndHashCode;
 public class Order implements Comparable<Order>{
   @EqualsAndHashCode.Include private final UUID id;
   private final UUID userId;
-  private final UUID printerId;
+  private UUID printerId;
   private final Object qr; // todo: check how to store the qr
   private Instant printedAt;
   private final Instant createdAt;
