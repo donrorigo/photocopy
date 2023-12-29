@@ -1,4 +1,4 @@
-package com.photocopy.io.domain.entities;
+package com.photocopy.io.core.domain.entities;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -9,11 +9,11 @@ import lombok.EqualsAndHashCode;
 @Data
 @Builder
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Order implements Comparable<Order>{
+public class Order implements Comparable<Order> {
   @EqualsAndHashCode.Include private final UUID id;
   private final UUID userId;
   private UUID printerId;
-  private final Object qr; // todo: check how to store the qr
+  private String qrReference;
   private Instant printedAt;
   private final Instant createdAt;
   private Instant updatedAt;
