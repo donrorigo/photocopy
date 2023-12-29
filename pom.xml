@@ -7,25 +7,65 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-parent</artifactId>
-    <version>3.1.0</version>
+    <version>3.1.7</version>
   </parent>
 
   <name>photocopy-parent</name>
   <modules>
+    <module>global-tools</module>
     <module>printer-service</module>
     <module>core-service</module>
     <module>back4frontend</module>
   </modules>
+
   <groupId>com.photocopy.io</groupId>
   <artifactId>photocopy</artifactId>
   <packaging>pom</packaging>
   <version>1.0.0-SNAPSHOT</version>
 
-
   <properties>
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <fmt-maven-plugin.version>2.20</fmt-maven-plugin.version>
   </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot</artifactId>
+    </dependency>
+  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.photocopy.io</groupId>
+        <artifactId>global-tools</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.spotify.fmt</groupId>
+        <artifactId>fmt-maven-plugin</artifactId>
+        <version>${fmt-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>format</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
