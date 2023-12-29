@@ -14,6 +14,7 @@ public class Order implements Comparable<Order> {
   private final UUID userId;
   private UUID printerId;
   private String qrReference;
+  private String pdfReference;
   private Instant printedAt;
   private final Instant createdAt;
   private Instant updatedAt;

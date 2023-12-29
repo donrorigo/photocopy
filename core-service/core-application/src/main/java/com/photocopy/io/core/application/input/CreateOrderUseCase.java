@@ -15,6 +15,7 @@ public interface CreateOrderUseCase extends UseCase<InputValues, Order> {
   class InputValues {
     private final UUID userId;
     private final UUID printerId;
+    private final Object pdf; // todo: check how to store the PDF
     private final Instant printedAt;
   }
 }
